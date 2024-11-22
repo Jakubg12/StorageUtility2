@@ -1,0 +1,14 @@
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/bin/Debug/net9.0/StorageUtility2
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/bin/Debug/net9.0/StorageUtility2.deps.json
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/bin/Debug/net9.0/StorageUtility2.runtimeconfig.json
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/bin/Debug/net9.0/StorageUtility2.dll
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/bin/Debug/net9.0/StorageUtility2.pdb
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/obj/Debug/net9.0/StorageUtility2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/obj/Debug/net9.0/StorageUtility2.AssemblyInfoInputs.cache
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/obj/Debug/net9.0/StorageUtility2.AssemblyInfo.cs
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/obj/Debug/net9.0/StorageUtility2.csproj.CoreCompileInputs.cache
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/obj/Debug/net9.0/StorageUtility2.dll
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/obj/Debug/net9.0/refint/StorageUtility2.dll
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/obj/Debug/net9.0/StorageUtility2.pdb
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/obj/Debug/net9.0/StorageUtility2.genruntimeconfig.cache
+/Users/jakubgrzebinoga/Documents/code/StorageUtility2/obj/Debug/net9.0/ref/StorageUtility2.dll
