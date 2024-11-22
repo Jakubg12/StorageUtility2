@@ -1,0 +1,10 @@
+{
+  "TargetIp": "192.168.1.109",
+  "SourceBkpLocations": "/users/jakubgrzebinoga",
+  "DestinationBkpLocations": "Backups/",
+  "Preferences": {
+    "TargetIP": "TargetIP",
+    "SourceLocation": "SourceBkpLocations",
+    "DestinationLocation": "DestinationBkpLocation"
+  }
+}

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jakubgrzebinoga/Documents/code/StorageUtility2/StorageUtility2.csproj",
+      "projectUniqueName": "/Users/jakubgrzebinoga/Documents/code/StorageUtility2/StorageUtility2/StorageUtility2.csproj",
       "projectName": "StorageUtility2",
-      "projectPath": "/Users/jakubgrzebinoga/Documents/code/StorageUtility2/StorageUtility2.csproj",
+      "projectPath": "/Users/jakubgrzebinoga/Documents/code/StorageUtility2/StorageUtility2/StorageUtility2.csproj",
       "packagesPath": "/Users/jakubgrzebinoga/.nuget/packages/",
-      "outputPath": "/Users/jakubgrzebinoga/Documents/code/StorageUtility2/obj/",
+      "outputPath": "/Users/jakubgrzebinoga/Documents/code/StorageUtility2/StorageUtility2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jakubgrzebinoga/.nuget/NuGet/NuGet.Config"

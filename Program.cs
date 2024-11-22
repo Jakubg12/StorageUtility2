@@ -4,6 +4,7 @@ using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 class NetworkScanner
 {
@@ -56,7 +57,23 @@ class NetworkScanner
 
             }
             Console.WriteLine("Found live address:" + networkLocation);
+            
+           
         }
+         Data pref = new Data
+            {
+                TargetIp = UserInput("Which IP address belongs to your NAS drive?"),
+                SourceBkpLocations = UserInput("Enter the location you want to backup (highest lvl location)"),
+                DestinationBkpLocations = UserInput("Enter where you want the backup to be save to (within IP address)"),
+                Preferences = new Dictionary<string, string>{
+                    {"TargetIP", "TargetIP"},
+                    {"SourceLocation", "SourceBkpLocations"},
+                    {"DestinationLocation", "DestinationBkpLocation"}
+                }
+            };
+            string json = JsonSerializer.Serialize(pref, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText("pref.json", json);
+            Console.WriteLine("Preferences Saved");
     }
 
    private async Task ArrayTidy(string[] array){
@@ -64,8 +81,21 @@ class NetworkScanner
         string[] tidyLiveIps = liveIps.Where(ip => ip != null).ToArray();
         await PingReport(tidyLiveIps);
     }
+
+    private static String UserInput(string message)
+    {
+        Console.WriteLine(message);
+        string userEntry = Console.ReadLine();
+        return userEntry;
+    }
 }
 
+class Data{
+    public string TargetIp { get; set; }
+    public string SourceBkpLocations { get; set; }
+    public string DestinationBkpLocations { get; set;}
+    public Dictionary<string, string> Preferences { get; set; } = new Dictionary<string, string>();
+}
 
 class Program{
 
