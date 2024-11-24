@@ -5,6 +5,8 @@ using System.Net.Sockets;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Text.Json;
+using System.Data;
+using System.Runtime.InteropServices;
 
 class NetworkScanner
 {
@@ -60,6 +62,9 @@ class NetworkScanner
             
            
         }
+
+        MapDrives();
+
          Data pref = new Data
             {
                 TargetIp = UserInput("Which IP address belongs to your NAS drive?"),
@@ -87,6 +92,43 @@ class NetworkScanner
         Console.WriteLine(message);
         string userEntry = Console.ReadLine();
         return userEntry;
+    }
+
+    private async Task MapDrives(){
+        List<DriveInfo> driveList = new List<DriveInfo>{};
+       
+                DriveInfo[] drives = DriveInfo.GetDrives();
+
+                foreach (DriveInfo drive in drives){
+                    driveList.Add(drive);
+                }
+
+                foreach(DriveInfo drive in driveList){
+                    Console.WriteLine("Found drive: "+drive.Name+"("+drive.VolumeLabel+" "+drive.RootDirectory+") with a " + drive.DriveFormat + " filesystem. Total space "+drive.TotalSize+" with "+drive.TotalFreeSpace+" of free space ("+drive.AvailableFreeSpace+" available) Drive is ready "+drive.IsReady);
+                }
+                Console.WriteLine("Get all directories in drives? ('N' - No, 'Y'-Yes for all, '[Drive name]- Yes for specific drive')");
+                switch(Console.ReadLine()){
+                    case "Y":
+                    List<string> dirList = new List<string>();
+                  
+                    var queryRootDir =
+                        from drive in driveList
+                        select new {drive.RootDirectory};
+                    foreach (var rootDir in queryRootDir){
+                        dirList.Add(rootDir.ToString());
+                    };
+                    foreach(string dir in dirList){
+                        List<string> subDirList = new List<string>(Directory.EnumerateDirectories(dir));
+                        foreach(string subDir in subDirList){
+                            Console.WriteLine(subDir);
+                        };
+                    };
+                    break;
+                    case "N":
+                    break;
+                    default:
+                    break;
+                }
     }
 }
 
