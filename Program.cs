@@ -102,7 +102,7 @@ class NetworkScanner
                 foreach (DriveInfo drive in drives){
                     driveList.Add(drive);
                 }
-
+//temporary writeline code, will replace with string builder or remove if necessary in live
                 foreach(DriveInfo drive in driveList){
                     Console.WriteLine("Found drive: "+drive.Name+"("+drive.VolumeLabel+" "+drive.RootDirectory+") with a " + drive.DriveFormat + " filesystem. Total space "+drive.TotalSize+" with "+drive.TotalFreeSpace+" of free space ("+drive.AvailableFreeSpace+" available) Drive is ready "+drive.IsReady);
                 }
@@ -120,6 +120,7 @@ class NetworkScanner
                     foreach(string dir in dirList){
                         List<string> subDirList = new List<string>(Directory.EnumerateDirectories(dir));
                         foreach(string subDir in subDirList){
+                            //temporary code, will put to data file
                             Console.WriteLine(subDir);
                         };
                     };
